@@ -2,6 +2,31 @@ import { NavItem } from './nav-item/nav-item';
 
 export const navItems: NavItem[] = [
   {
+    navCap: 'Estudos',
+  },
+  {
+    displayName: 'Campo Harmônico',
+    iconName: 'solar:atom-line-duotone',
+    route: '/campoharmonico',
+  },
+  {
+    navCap: 'Exercícios',
+  },
+  {
+    displayName: 'Qual a nota do grau?',
+    iconName: 'solar:atom-line-duotone',
+    route: '/qualgrau',
+  },
+  {
+    displayName: 'Analytics',
+    iconName: 'solar:widget-add-line-duotone',
+    route: 'https://materialm-angular-main.netlify.app/dashboards/dashboard1',
+    chip: true,
+    external: true,
+    chipClass: 'bg-secondary text-white',
+    chipContent: 'PRO',
+  },
+  {
     navCap: 'Home',
   },
   {
