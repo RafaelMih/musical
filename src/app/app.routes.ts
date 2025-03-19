@@ -18,6 +18,11 @@ export const routes: Routes = [
           import('./pages/pages.routes').then((m) => m.PagesRoutes),
       },
       {
+        path: 'estudos',
+        loadChildren: () =>
+          import('./pages/estudos/estudos.routes').then((m) => m.EstudosRoutes),
+      },
+      {
         path: 'ui-components',
         loadChildren: () =>
           import('./pages/ui-components/ui-components.routes').then(

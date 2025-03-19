@@ -2,19 +2,27 @@ import { NavItem } from './nav-item/nav-item';
 
 export const navItems: NavItem[] = [
   {
+    navCap: 'Home',
+  },
+  {
+    displayName: 'Dashboard',
+    iconName: 'solar:music-note-outline',
+    route: '/dashboard',
+  },
+  {
     navCap: 'Estudos',
   },
   {
     displayName: 'Campo Harmônico',
-    iconName: 'solar:atom-line-duotone',
-    route: '/campoharmonico',
+    iconName: 'solar:music-note-outline',
+    route: '/estudos/campoharmonico',
   },
   {
     navCap: 'Exercícios',
   },
   {
     displayName: 'Qual a nota do grau?',
-    iconName: 'solar:atom-line-duotone',
+    iconName: 'solar:music-note-outline',
     route: '/qualgrau',
   },
   {
@@ -31,7 +39,7 @@ export const navItems: NavItem[] = [
   },
   {
     displayName: 'Dashboard',
-    iconName: 'solar:atom-line-duotone',
+    iconName: 'solar:music-note-outline',
     route: '/dashboard',
   },
   {

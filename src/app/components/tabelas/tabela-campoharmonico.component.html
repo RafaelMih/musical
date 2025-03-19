@@ -1,0 +1,20 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      @for(column of columnsToDisplay; track column) {
+        <th scope="col" class="text-center">{{column}}</th>
+      }
+    </tr>
+</thead>
+<tbody>    
+      @for(campoHarmonico of campoHarmonicoMaiorTriade; track campoHarmonico.key) {
+        <tr>
+          @for(note of campoHarmonico.notes; track note) {
+        <td class="text-center">{{note}}</td>
+        }
+        </tr>   
+      }
+</tbody>
+</table>
+
+
