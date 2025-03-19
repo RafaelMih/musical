@@ -19,7 +19,7 @@
           "options": {
             "allowedCommonJsDependencies": ["apexcharts", "bezier-easing"],
             "outputPath": {
-              "base": "docs"
+              "base": "docs/"
             },
             "index": "src/index.html",
             "polyfills": [
