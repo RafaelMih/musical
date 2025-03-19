@@ -4,16 +4,21 @@
   </mat-card-header>
   <mat-card-content class="b-t-1">
     <div class="row">
-      <div class="col-lg-6">
+      <mat-tab-group>
+      
+      
+        <mat-tab label="Maior"> 
+          <div class="row">
+          <div class="col-lg-6">
         <!-- ------------------------------------------------------------------------- -->
         <!-- basic -->
         <!-- ------------------------------------------------------------------------- -->        
-        <mat-card class="b-1 shadow-none">
+        <mat-card class="b-1 shadow-none mt-5">
           <mat-card-header>
-            <mat-card-title>Maior tríade</mat-card-title>
+            <mat-card-title>Tríade</mat-card-title>
           </mat-card-header>
           <mat-card-content class="b-t-1">
-            <app-tabela-campo-harmonico></app-tabela-campo-harmonico>
+            <app-tabela-campo-harmonico [tipoCampoHarmonico]="0"></app-tabela-campo-harmonico>
           </mat-card-content>    
         </mat-card>
       </div>
@@ -23,70 +28,122 @@
         <!-- avatar -->
         <!-- ------------------------------------------------------------------------- -->
 
-        <mat-card class="b-1 shadow-none">
+        <mat-card class="b-1 shadow-none mt-5">
           <mat-card-header>
-            <mat-card-title>Maior Tétrade </mat-card-title>
+            <mat-card-title>Tétrade </mat-card-title>
           </mat-card-header>
           <mat-card-content class="b-t-1">
-            <mat-chip-set aria-label="Dog selection">
-              <mat-chip class="f-s-14">
-                <img matChipAvatar src="/assets/images/profile/user-1.jpg" alt="Photo of a Shiba Inu" />
-                Anderson
-              </mat-chip>
-              <mat-chip class="f-s-14" color="primary">
-                <img matChipAvatar src="/assets/images/profile/user-2.jpg" alt="Photo of a Shiba Inu" />
-                Monty
-              </mat-chip>
-              <mat-chip class="f-s-14" color="accent">
-                <img matChipAvatar src="/assets/images/profile/user-3.jpg" alt="Photo of a Shiba Inu" />
-                Mathew
-              </mat-chip>
-            </mat-chip-set>
+            <app-tabela-campo-harmonico [tipoCampoHarmonico]="1"></app-tabela-campo-harmonico>
           </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+    </mat-tab>
+  <mat-tab label="Menor"> <div class="container row">
+          <div class="col-lg-6">
+        <!-- ------------------------------------------------------------------------- -->
+        <!-- basic -->
+        <!-- ------------------------------------------------------------------------- -->        
+        <mat-card class="b-1 shadow-none mt-5">
+          <mat-card-header>
+            <mat-card-title>Tríade</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="b-t-1">
+            <app-tabela-campo-harmonico [tipoCampoHarmonico]="2"></app-tabela-campo-harmonico>
+          </mat-card-content>    
         </mat-card>
       </div>
 
       <div class="col-lg-6">
         <!-- ------------------------------------------------------------------------- -->
-        <!-- Drag n Drop -->
+        <!-- avatar -->
         <!-- ------------------------------------------------------------------------- -->
 
-        <mat-card class="b-1 shadow-none">
+        <mat-card class="b-1 shadow-none mt-5">
           <mat-card-header>
-            <mat-card-title>Drag n Drop</mat-card-title>
+            <mat-card-title>Tétrade </mat-card-title>
           </mat-card-header>
           <mat-card-content class="b-t-1">
-            <mat-chip-set class="example-chip" cdkDropList cdkDropListOrientation="horizontal"
-              (cdkDropListDropped)="drop($event)">
-              @for (vegetable of vegetables(); track vegetable.name) {
-              <mat-chip class="example-box" cdkDrag>{{
-                vegetable.name
-                }}</mat-chip>
-              }
-            </mat-chip-set>
+            <app-tabela-campo-harmonico [tipoCampoHarmonico]="3"></app-tabela-campo-harmonico>
           </mat-card-content>
         </mat-card>
       </div>
-
-      <div class="col-lg-6">
-        <!-- ------------------------------------------------------------------------- -->
-        <!-- Stacked  -->
-        <!-- ------------------------------------------------------------------------- -->
-        <mat-card class="b-1 shadow-none">
+    </div> </mat-tab>
+  <mat-tab label="Instruções"> 
+    <div class="container row">
+    <mat-card class="b-1 shadow-none mt-5 col-lg-6 mr-5">
           <mat-card-header>
-            <mat-card-title>Stacked </mat-card-title>
+            <mat-card-title>1. Campo Harmônico Menor Natural (harmônico tradicional):</mat-card-title>
           </mat-card-header>
           <mat-card-content class="b-t-1">
-            <mat-chip-listbox class="mat-mdc-chip-set-stacked" aria-label="Color selection">
-              @for(chip of availableColors; track chip.color) {
-              <mat-chip-option selected [color]="chip.color">
-                {{ chip.name }}
-              </mat-chip-option>
-              }
-            </mat-chip-listbox>
+            <p>De acordo com a teoria do campo harmônico menor natural tradicional, a formação dos acordes é a seguinte:</p>
+            <ul>
+                <li><strong>1º grau:</strong> Acorde menor com 7 (m7).</li>
+                <li><strong>2º grau:</strong> Acorde diminuto com 7 (m7(b5)).</li>
+                <li><strong>3º grau:</strong> Acorde maior com 7 (M7).</li>
+                <li><strong>4º grau:</strong> Acorde menor com 7 (m7).</li>
+                <li><strong>5º grau:</strong> Acorde menor com 7 (m7).</li>
+                <li><strong>6º grau:</strong> Acorde maior com 7 (M7).</li>
+                <li><strong>7º grau:</strong> Acorde maior com 7 (M7 ou 7).</li>
+            </ul>
           </mat-card-content>
         </mat-card>
-      </div>
+
+
+        <mat-card class="b-1 shadow-none mt-5 col-lg-6">
+          <mat-card-header>
+            <mat-card-title>2. Campo Harmônico Menor Harmônico (com o 5º grau maior):</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="b-t-1">
+            <p>Para o campo harmônico menor harmônico, temos a seguinte estrutura:</p>
+            <ul>
+                <li><strong>1º grau:</strong> Acorde menor com 7 (m7).</li>
+                <li><strong>2º grau:</strong> Acorde diminuto com 7 (m7(b5)).</li>
+                <li><strong>3º grau:</strong> Acorde maior com 7 (M7).</li>
+                <li><strong>4º grau:</strong> Acorde menor com 7 (m7).</li>
+                <li><strong>5º grau:</strong> Acorde maior com 7 (7).</li>
+                <li><strong>6º grau:</strong> Acorde maior com 7 (M7).</li>
+                <li><strong>7º grau:</strong> Acorde diminuto com 7 (dim7).</li>
+            </ul>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="b-1 shadow-none mt-5 col-lg-6">
+          <mat-card-header>
+            <mat-card-title>3. Campo Harmônico Menor Melódico (com modificações no 6º grau):</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="b-t-1">
+            <p>A versão melódica tem a modificação no 6º grau e a estrutura é a seguinte:</p>
+            <ul>
+                <li><strong>1º grau:</strong> Acorde menor com 7 (m7).</li>
+                <li><strong>2º grau:</strong> Acorde menor com 7 (m7).</li>
+                <li><strong>3º grau:</strong> Acorde maior com 7 (M7).</li>
+                <li><strong>4º grau:</strong> Acorde maior com 7 (M7).</li>
+                <li><strong>5º grau:</strong> Acorde dominante com 7 (7).</li>
+                <li><strong>6º grau:</strong> Acorde menor com 7 (m7) no caso da melódica.</li>
+                <li><strong>7º grau:</strong> Acorde diminuto com 7 (m7(b5)).</li>
+            </ul>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="b-1 shadow-none mt-5 col-lg-6">
+          <mat-card-header>
+            <mat-card-title>Aplicação nos Tons</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="b-t-1">
+            <p>Agora, vamos aplicar essas estruturas para cada um dos tons, de acordo com os acordes de tetrade para cada um dos três tipos de campo harmônico:</p>
+            <ul>
+                <li><strong>Campo Harmônico Menor Natural (harmônico tradicional):</strong> Este campo segue a estrutura mencionada acima, com M7 no 3º e 6º graus, m7 no 1º, 4º e 5º graus, e m7(b5) no 2º grau. O 7º grau é M7 ou 7 dependendo da tonalidade.</li>
+                <li><strong>Campo Harmônico Menor Harmônico:</strong> Aqui, o 5º grau será um acorde 7 e o 7º grau será um dim7, conforme as características do campo harmônico menor harmônico.</li>
+                <li><strong>Campo Harmônico Menor Melódico:</strong> No campo melódico, o 6º grau será m7 e o 7º grau será m7(b5), com a modificação no 6º grau para manter a característica melódica.</li>
+            </ul>
+          </mat-card-content>
+        </mat-card>
+    
+    
+    
+  </div></mat-tab>
+</mat-tab-group>
     </div>
   </mat-card-content>
 </mat-card>

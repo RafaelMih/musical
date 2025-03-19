@@ -2,5 +2,12 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+
+.mat-mdc-tab.mdc-tab {    
+    background-color: #F8FAFD;
+    border: 1px solid #f3f6fa;   
+}

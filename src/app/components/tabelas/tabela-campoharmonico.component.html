@@ -1,3 +1,16 @@
+
+
+    <div class="col-lg-6">          
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input matInput
+      class=""
+      type="text"
+      [value]=""
+      (keyup)="filtrarNotas($event)"
+      placeholder="Filtrar acordes"
+    />
+          </mat-form-field>
+    </div>            
 <table class="table table-striped">
   <thead>
     <tr>
@@ -7,9 +20,9 @@
     </tr>
 </thead>
 <tbody>    
-      @for(campoHarmonico of campoHarmonicoMaiorTriade; track campoHarmonico.key) {
+      @for(campoHarmonic of campoHarmonico; track campoHarmonic) {
         <tr>
-          @for(note of campoHarmonico.notes; track note) {
+          @for(note of campoHarmonic; track note) {
         <td class="text-center">{{note}}</td>
         }
         </tr>   
